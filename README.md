@@ -6,7 +6,17 @@
 ### Precautions 
 - **Access tokens are dangerous, if someone has your access token, they have full access to your Canvas.**
 - To use CronLMS, you must have an **Access Token**, placed inside of the **token.txt** file. An Access Token **is not a browser cookie**. Cookies are temporary, and last only a **few hours**.
-- When whiptail is used, Ive added transparency flags to make it look better, these **may** cause artifacts or unclear text if ran on a terminal emulator other than [kitty](https://sw.kovidgoyal.net/kitty/) 
+- When whiptail is used, Ive added transparency flags to make it look better, these **may** cause artifacts or unclear text if ran on a terminal emulator other than [kitty](https://sw.kovidgoyal.net/kitty/)
+
+### Screenshots
+<p align="center">
+  <img src="image4.png" width="45%" />
+  <img src="image3.png" width="45%" />
+</p>
+<p align="center">
+  <img src="image2.png" width="45%" />
+  <img src="image1.png" width="45%" />
+</p>
 
 ### Get an Access Token
 There are multiple ways to get a canvas **access token**, The safest and most reliable is to use the **Create Access Token Button** through your canvas settings. 
