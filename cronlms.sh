@@ -14,7 +14,7 @@ EOF
 }
 draw_ascii
 echo "[CronLMS] starting"
-sleep 0.1
+sleep 0.3
 
 
 # set variables
@@ -33,6 +33,9 @@ export NEWT_COLORS='
 echo "[CronLMS] setting token"
 export TOKEN="$(cat token.txt)"
 
+echo "[CronLMS] setting domain"
+export DOMAIN="YOUR_DOMAIN"
+
 # clean function
 clean(){
 echo "[CronLMS] cleaning up"
@@ -47,7 +50,7 @@ clean
 # fetch the courses list
 echo "[CronLMS] fetching course list"
 curl -sL -H "Authorization: Bearer $TOKEN" \
-  "https://forsyth.instructure.com/api/v1/courses/?per_page=1000" \
+  "https://$DOMAIN.instructure.com/api/v1/courses/?per_page=1000" \
   -o coursescurl.json
 
 
@@ -86,7 +89,7 @@ fi
 
 # fetch the main page of the course
 curl -sL -H "Authorization: Bearer $TOKEN" \
-  "https://forsyth.instructure.com/api/v1/courses/$COURSE/front_page" \
+  "https://$DOMAIN.instructure.com/api/v1/courses/$COURSE/front_page" \
   -o front_page.json
 
 
