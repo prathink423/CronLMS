@@ -14,7 +14,7 @@ EOF
 }
 draw_ascii
 echo "[CronLMS] starting"
-sleep 0.3
+sleep 0.1
 
 
 # set variables
@@ -100,7 +100,6 @@ jq -r .body \
 
 # render the html
 echo "[CronLMS] rendering the html"
-sleep 2
 w3m -dump front_page.html > front_page.txt
 
 # append to file
